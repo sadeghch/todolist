@@ -1,0 +1,133 @@
+@font-face {
+  font-family: yekan;
+  src: url(./fonts/Yekan.ttf);
+}
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yekan";
+  list-style: none;
+  font-size: 20px;
+}
+
+/* variables */
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-direction: column;
+  background-color: var(--bodyColor);
+}
+header {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.form-container {
+  display: flex;
+}
+form {
+  width: 25rem;
+  background-color: var(--mainWhite);
+  display: flex;
+  justify-content: space-between;
+}
+form input {
+  flex: 1;
+}
+form input,
+form button {
+  border: none;
+  outline: none;
+  background-color: var(--mainWhite);
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+form button {
+  color: var(--primaryColor);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+form button:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+.todo-container {
+  width: 25rem;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.3rem 0;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--secondaryColor);
+}
+.todo li {
+  flex: 1;
+  color: var(--primaryColor);
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+.todo span {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.fa-check-square {
+  color: var(--primaryColor);
+}
+.fa-trash-alt {
+  color: var(--mainRed);
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+select {
+  appearance: none;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+  color: var(--primaryColor);
+}
+.select {
+  margin-left: 1rem;
+  background-color: var(--mainWhite);
+  cursor: pointer;
+  width: 10rem;
+  font-weight: bold;
+  position: relative;
+}
+.select::after {
+  content: "\25bc";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: var(--primaryColor);
+  pointer-events: none;
+}
